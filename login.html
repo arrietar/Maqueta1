@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperCalc - Inicio de Sesión</title>
+  <link rel="stylesheet" href="estilos1.css" />
+</head>
+
+<body>
+  <div class="background">
+    <div class="pattern"></div>
+  </div>
+
+  <!-- Barra superior tipo navegador -->
+  <header class="header-bar">
+    <div class="brand">
+      <!-- ICONO AQUÍ (logo de SuperBrix o similar) -->
+      <h1>SuperCalc - SuperBrix</h1>
+    </div>
+    <div class="url-bar">
+      <!-- ICONO AQUÍ (candado HTTPS) -->
+      <span>https://intrabrix.com/SuperCalc/login</span>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="login-container">
+    <section class="login-card">
+      <div class="user-icon">
+        <!-- ICONO AQUÍ (usuario) -->
+      </div>
+
+      <h2>Bienvenido a SuperCalc</h2>
+      <p>Ingresa tus credenciales para acceder</p>
+
+      <form class="login-form">
+        <label for="usuario">Usuario</label>
+        <div class="input-group">
+          <!-- ICONO AQUÍ (usuario dentro del campo) -->
+          <input id="usuario" type="text" placeholder="Ingresa tu usuario" required>
+        </div>
+
+        <label for="password">Contraseña</label>
+        <div class="input-group">
+          <!-- ICONO AQUÍ (candado) -->
+          <input id="password" type="password" placeholder="Ingresa tu contraseña" required>
+          <!-- ICONO AQUÍ (mostrar contraseña) -->
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox"> Recordarme</label>
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <button type="submit" class="btn-login">Iniciar sesión</button>
+
+        <div class="divider">
+          <span>o</span>
+        </div>
+
+        <p class="register-text">¿No tienes cuenta? <a href="#">Regístrate aquí</a></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperBrix S.A. | Sistema SuperCalc v2.0</p>
+    <small>Soporte técnico: soporte@superbrix.com | Tel: +57 (5) 123-4567</small>
+  </footer>
+</body>
+</html>
