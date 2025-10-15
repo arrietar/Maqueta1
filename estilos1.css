@@ -45,6 +45,13 @@ body {
   font-weight: bold;
 }
 
+.brand img {
+  height: 45px;        /* 🔧 Ajusta el alto del logo */
+  width: auto;         /* Mantiene la proporción */
+  margin-right: 12px;  /* Espacio entre el logo y el texto */
+  vertical-align: middle; /* Centra el logo con el texto */
+}
+
 .url-bar {
   background: white;
   border: 2px solid #ccc;
@@ -52,6 +59,13 @@ body {
   padding: 5px 15px;
   font-size: 14px;
   color: #666;
+}
+
+.url-bar img {
+  height: 15px;        /* 🔧 Ajusta el alto */
+  width: auto;         /* Mantiene la proporción */
+  margin-right: 12px;  /* Espacio entre el logo y el texto */
+  vertical-align: middle; /* Centra el logo con el texto */
 }
 
 /* ---------- Contenedor principal ---------- */
@@ -85,6 +99,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.user-icon img {
+  height: 80px;        /* 🔧 Ajusta el alto */
+  width: auto;         /* Mantiene la proporción */
+  margin-right: 0px;  /* Espacio entre el logo y el texto */
+  vertical-align: middle; /* Centra el logo con el texto */
 }
 
 /* ---------- Formulario ---------- */
