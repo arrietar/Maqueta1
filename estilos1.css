@@ -118,20 +118,45 @@ body {
 
 .input-group {
   position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #ff6600;
+  border-radius: 25px;
+  padding: 10px 15px;
+  margin: 12px 0;
+  width: 100%;
+  max-width: 350px;   /* Ajusta el ancho según tu diseño */
+  box-sizing: border-box;
+}
+
+.input-group img {
+  flex-shrink: 0;       /* Evita que el icono se deforme o reduzca */
+  width: 24px;          /* Ajusta tamaño del icono */
+  height: 24px;
+  margin-right: 25px;   /* 💡 Espacio entre icono y campo */
+  object-fit: contain;  /* Mantiene proporciones del logo */
 }
 
 .input-group input {
-  width: 100%;
-  padding: 14px 18px;
-  border: 2px solid #ff6600;
-  border-radius: 25px;
+  flex-grow: 1;
+  border: none;
   outline: none;
-  font-size: 15px;
+  font-size: 16px;
+  padding: 10px 5px;
+  background: transparent;
   color: #333;
+  min-width: 0;         /* Evita que el input cause desbordes */
+  line-height: 1.4;
 }
 
 .input-group input::placeholder {
-  color: #999;
+  color: #aaa;
+}
+
+.input-group:focus-within {
+  border-color: #ff8533; /* Color del borde al hacer foco */
+  box-shadow: 0 0 5px rgba(255, 102, 0, 0.3);
 }
 
 /* Posibles íconos dentro de los campos */
