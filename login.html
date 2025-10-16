@@ -19,7 +19,7 @@
       <h1>SuperCalc - SuperBrix</h1>
     </div>
     <div class="url-bar">
-      <img src="icons/candado.png" alt="log-in">
+       <img src="icons/candado.png" alt="candado" class="url-icon">
       <span>https://intrabrix.com/SuperCalc/login</span>
     </div>
   </header>
@@ -28,24 +28,25 @@
   <main class="login-container">
     <section class="login-card">
       <div class="user-icon">
-        <img src="icons/user.png" alt="usuario">
+        <img src="icons/user.png" alt="usuario principal">
       </div>
 
       <h2>Bienvenido a SuperCalc</h2>
       <p>Ingresa tus credenciales para acceder</p>
 
       <form class="login-form">
+        <!-- Campo usuario -->
         <label for="usuario">Usuario</label>
         <div class="input-group">
-          <img src="icons/user2.png" alt="usuario2">
           <input id="usuario" type="text" placeholder="Ingresa tu usuario" required>
+          <img src="icons/user2.png" alt="usuario2">
         </div>
 
+        <!-- Campo contraseña -->
         <label for="password">Contraseña</label>
         <div class="input-group">
-          <!-- ICONO AQUÍ (candado) -->
           <input id="password" type="password" placeholder="Ingresa tu contraseña" required>
-          <!-- ICONO AQUÍ (mostrar contraseña) -->
+          <img id="togglePassword" src="icons/eye-closed.png" alt="Mostrar contraseña" class="icon-right" role="button" tabindex="0" aria-pressed="false">
         </div>
 
         <div class="options">
@@ -68,5 +69,27 @@
     <p>© 2025 SuperBrix S.A. | Sistema SuperCalc v2.0</p>
     <small>Soporte técnico: soporte@superbrix.com | Tel: +57 (5) 123-4567</small>
   </footer>
+  <script>
+    const passwordInput = document.getElementById('password');
+    const togglePassword = document.getElementById('togglePassword');
+
+    togglePassword.addEventListener('click', () => {
+      const isHidden = passwordInput.type === 'password';
+
+      // Cambia el tipo de input
+      passwordInput.type = isHidden ? 'text' : 'password';
+
+      // Cambia el icono según el estado
+      togglePassword.src = isHidden 
+        ? 'icons/eye-closed.png' 
+        : 'icons/eye-open.png';
+
+      // Accesibilidad: actualiza el texto alternativo
+      togglePassword.alt = isHidden 
+        ? 'Ocultar contraseña' 
+        : 'Mostrar contraseña';
+    });
+  </script>
+
 </body>
 </html>
