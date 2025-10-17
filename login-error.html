@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Error de Inicio de Sesión - SuperCalc</title>
+  <link rel="stylesheet" href="estilos1.css" />
+</head>
+
+<body>
+  <div class="background">
+    <div class="pattern"></div>
+  </div>
+
+  <!-- Barra superior tipo navegador -->
+  <header class="header-bar">
+    <div class="brand">
+      <img src="icons/SB-65-HORIZONTAL.png" alt="logo">
+      <h1>SuperCalc - SuperBrix</h1>
+    </div>
+    <div class="url-bar">
+      <img src="icons/candado.png" alt="candado" class="url-icon">
+      <span>https://intrabrix.com/SuperCalc/login-error</span>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="login-container">
+    <section class="login-card">
+      <div class="user-icon">
+        <img src="icons/user.png" alt="Error de autenticación">
+      </div>
+
+      <h2>Error de autenticación</h2>
+      <p>Las credenciales ingresadas no son válidas. Verifica tu usuario y contraseña e intenta nuevamente.</p>
+
+      <!-- Sección de departamentos -->
+      <div class="departments">
+        <div class="department">
+          <img src="icons/diseno.png" alt="Departamento de Ingeniería y Diseño" class="dept-icon">
+          <p>DEPARTAMENTO DE<br><strong>INGENIERÍA Y DISEÑO</strong></p>
+        </div>
+
+        <div class="department">
+          <img src="icons/innovacion.png" alt="Departamento de Innovación" class="dept-icon">
+          <p>DEPARTAMENTO DE<br><strong>INNOVACIÓN</strong></p>
+        </div>
+      </div>
+
+      <!-- Botón de reintentar -->
+      <button onclick="window.location.href='login.html'" class="btn-login">Reintentar inicio de sesión</button>
+
+      <!-- Enlace de recuperación -->
+      <p class="register-text" style="margin-top:20px;">¿Olvidaste tu contraseña? <a href="#">Recupérala aquí</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperBrix S.A. | Sistema SuperCalc v2.0</p>
+    <small>Soporte técnico: soporte@superbrix.com | Tel: +57 (5) 123-4567</small>
+  </footer>
+</body>
+</html>
