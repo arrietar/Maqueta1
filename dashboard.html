@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperCalc - Panel Principal</title>
+  <link rel="stylesheet" href="estilos1.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+  <header class="header-bar">
+    <div class="brand">
+      <img src="icons/SB-65-HORIZONTAL.png" alt="logo" class="logo">
+      <h1>SuperCalc</h1>
+    </div>
+
+    <nav class="user-menu">
+      <span class="welcome">Bienvenido, <strong>Jefe de Diseño</strong></span>
+      <img src="icons/user2.png" alt="usuario" class="user-icon">
+      <button onclick="cerrarSesion()" class="btn-logout">Cerrar sesión</button>
+    </nav>
+  </header>
+
+  <main class="dashboard-container">
+    <aside class="sidebar">
+      <ul>
+        <li class="active"><img src="icons/home.png" alt=""><span>Inicio</span></li>
+        <li><img src="icons/calculos.png" alt=""><span>Simulaciones</span></li>
+        <li><img src="icons/materiales.png" alt=""><span>Materiales</span></li>
+        <li><img src="icons/reportes.png" alt=""><span>Informes</span></li>
+        <li><img src="icons/auditoria.png" alt=""><span>Auditoría</span></li>
+        <li><img src="icons/users.png" alt=""><span>Usuarios</span></li>
+        <li><img src="icons/config.png" alt=""><span>Configuración</span></li>
+        <li><img src="icons/help.png" alt=""><span>Ayuda</span></li>
+      </ul>
+    </aside>
+
+    <section class="main-content">
+      <h2>Módulos Disponibles</h2>
+      <p class="subtitle">Seleccione el módulo con el que desea trabajar.</p>
+
+      <div class="modules-grid">
+        <!-- 1 -->
+        <article class="module-card" role="button" tabindex="0" onclick="ir('simulaciones.html')">
+          <div class="module-thumb">
+            <img src="icons/simulaciones-big.png" alt="Simulaciones y cálculos">
+          </div>
+          <h3>Simulaciones y Cálculos</h3>
+          <p class="muted">Ejecutar cálculos técnicos</p>
+        </article>
+
+        <!-- 2 -->
+        <article class="module-card" role="button" tabindex="0" onclick="ir('materiales.html')">
+          <div class="module-thumb">
+            <img src="icons/baseDatos-big.png" alt="Base de datos">
+          </div>
+          <h3>Base de Datos</h3>
+          <p class="muted">Materiales y propiedades</p>
+        </article>
+
+        <!-- 3 -->
+        <article class="module-card" role="button" tabindex="0" onclick="ir('informes.html')">
+          <div class="module-thumb">
+            <img src="icons/informes-big.png" alt="Generación de informes">
+          </div>
+          <h3>Generación de Informes</h3>
+          <p class="muted">Crear reportes técnicos</p>
+        </article>
+
+        <!-- 4 -->
+        <article class="module-card" role="button" tabindex="0" onclick="ir('auditoria.html')">
+          <div class="module-thumb">
+            <img src="icons/auditoria-big.png" alt="Auditoría y reportes">
+          </div>
+          <h3>Auditoría y Reportes</h3>
+          <p class="muted">Historial de operaciones</p>
+        </article>
+
+        <!-- 5 - Gestión de Usuarios (ADMIN badge) -->
+        <article class="module-card" role="button" tabindex="0" data-role="admin" onclick="ir('usuarios.html')">
+          <div class="module-thumb">
+            <img src="icons/gestion-usuarios-big.png" alt="Gestión de usuarios">
+            <span class="badge-admin">ADMIN</span>
+          </div>
+          <h3>Gestión de Usuarios</h3>
+          <p class="muted">Administrar permisos</p>
+        </article>
+
+        <!-- 6 -->
+        <article class="module-card" role="button" tabindex="0" onclick="ir('configuracion.html')">
+          <div class="module-thumb">
+            <img src="icons/config-big.png" alt="Configuración">
+          </div>
+          <h3>Configuración</h3>
+          <p class="muted">Preferencias del sistema</p>
+        </article>
+
+        <!-- 7 -->
+        <article class="module-card" role="button" tabindex="0" onclick="ir('ayuda.html')">
+          <div class="module-thumb">
+            <img src="icons/ayuda-big.png" alt="Ayuda y soporte">
+          </div>
+          <h3>Ayuda y Soporte</h3>
+          <p class="muted">Documentación y tutoriales</p>
+        </article>
+
+        <!-- 8 -->
+        <article class="module-card module-logout" role="button" tabindex="0" onclick="cerrarSesion()">
+          <div class="module-thumb">
+            <img src="icons/logout-big.png" alt="Cerrar sesión">
+          </div>
+          <h3>Cerrar Sesión</h3>
+          <p class="muted">Salir del sistema</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperBrix S.A. | Sistema SuperCalc v2.0</p>
+  </footer>
+
+  <script>
+    function cerrarSesion() {
+      // redirigir a login (aquí podría ir limpieza de tokens, logout API, etc.)
+      window.location.href = 'login.html';
+    }
+    function ir(url) {
+      window.location.href = url;
+    }
+
+    // accesibilidad: permitir Enter para artículos con role=button
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        const el = document.activeElement;
+        if (el && el.getAttribute && el.getAttribute('role') === 'button') {
+          el.click();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

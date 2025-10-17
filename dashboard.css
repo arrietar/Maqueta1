@@ -1,0 +1,127 @@
+/* Layout general */
+.dashboard-container {
+  display: flex;
+  height: calc(100vh - 100px);
+  background: #18c1d8; /* color de fondo similar al que usas */
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(180deg,#0077b6,#0096c7);
+  color: #fff;
+  padding-top: 24px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+}
+
+.sidebar ul { list-style: none; padding: 0; margin: 0; }
+.sidebar li {
+  display:flex; align-items:center; gap:12px;
+  padding:12px 18px; cursor:pointer; transition:background .18s;
+}
+.sidebar li img { width:20px; height:20px; }
+.sidebar li:hover, .sidebar li.active { background: rgba(255,255,255,0.06); }
+
+/* Main content */
+.main-content {
+  flex:1;
+  padding: 30px;
+  overflow-y:auto;
+}
+
+.main-content h2 { font-size: 24px; color:#002b3a; margin-bottom:6px; }
+.main-content .subtitle { color: #00393f; opacity: .85; margin-bottom:18px; }
+
+/* Grid de módulos */
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* Tarjeta de módulo */
+.module-card {
+  background: #f3fbff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+}
+
+.module-card:focus { box-shadow: 0 8px 20px rgba(0,0,0,0.12); transform: translateY(-4px); }
+
+.module-card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0,0,0,0.12); }
+
+.module-thumb {
+  width: 100%;
+  height: 95px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45));
+  border-radius: 10px;
+  position: relative;
+}
+
+.module-thumb img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* Badge ADMIN (posicionado sobre la miniatura) */
+.badge-admin {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: #ffd54f;
+  color: #222;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+/* Titulos y subtítulos de tarjeta */
+.module-card h3 {
+  margin: 12px 0 6px;
+  font-size: 16px;
+  color: #052a2f;
+}
+.module-card .muted {
+  font-size: 13px;
+  color: #42656b;
+  opacity: 0.9;
+}
+
+/* Módulo Cerrar sesión: estilo distintivo */
+.module-card.module-logout {
+  background: #ffeaea;
+  border: 1px solid #ffc2c2;
+}
+
+.module-card.module-logout h3 { color: #c92a2a; }
+.module-card.module-logout .muted { color: #b23a3a; }
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .modules-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .modules-grid { grid-template-columns: repeat(2, 1fr); }
+  .sidebar { display: none; } /* o colapsar con botón si prefieres */
+}
+@media (max-width: 480px) {
+  .modules-grid { grid-template-columns: 1fr; }
+  .module-thumb img { width: 48px; height: 48px; }
+}
