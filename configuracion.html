@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperCalc - Mi Cuenta</title>
+  <link rel="stylesheet" href="configuracion.css" />
+</head>
+
+<body>
+  <header class="header-bar">
+    <div class="brand">
+      <img src="icons/SB-65-HORIZONTAL.png" alt="logo">
+      <h1>SuperCalc - SuperBrix</h1>
+    </div>
+    <div class="url-bar">
+      <img src="icons/candado.png" alt="https">
+      <span>https://intrabrix.com/SuperCalc/mi-cuenta</span>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <!-- Departamentos -->
+    <div class="departments">
+      <div class="department left">
+        <img src="icons/diseno.png" alt="ingenieria">
+        <p>DEPARTAMENTO DE<br><strong>INGENIERÍA Y DISEÑO</strong></p>
+      </div>
+      <h2 class="page-title">Configuración</h2>
+      <div class="department right">
+        <img src="icons/innovacion.png" alt="innovacion">
+        <p>DEPARTAMENTO DE<br><strong>INNOVACIÓN</strong></p>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <span>🏠 Dashboard</span> ›
+      <strong>Configuración</strong>
+    </nav>
+
+    <section class="content">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="profile-photo">
+          <img src="icons/user.png" alt="usuario">
+        </div>
+        <button class="btn-change-photo">📷 Cambiar foto</button>
+
+        <h3>Juan Pérez</h3>
+        <p class="email">juan.perez@superbrix.com</p>
+        <div class="role">👤 JEFE DE DISEÑO</div>
+
+        <hr>
+
+        <h4>Estadísticas de Uso</h4>
+        <ul class="stats">
+          <li>📊 Cálculos realizados: <span>342</span></li>
+          <li>📄 Informes generados: <span>78</span></li>
+          <li>📅 Último acceso: <span>Hoy 14:23</span></li>
+          <li>⏱️ Cuenta creada: <span>15/03/2024</span></li>
+        </ul>
+
+        <button class="btn-secondary">📊 Ver Mi Actividad</button>
+        <button class="btn-danger" id="cerrarSesion">🚪 Cerrar Sesión</button>
+      </aside>
+
+      <!-- Panel principal -->
+      <div class="main-panel">
+        <div class="tabs">
+          <button class="active" data-tab="datos">✏️ Datos Personales</button>
+          <button data-tab="seguridad">🔐 Seguridad</button>
+          <button data-tab="notificaciones">🔔 Notificaciones</button>
+          <button data-tab="preferencias">⚙️ Preferencias</button>
+        </div>
+
+        <!-- Contenido dinámico -->
+        <div class="tab-content" id="tabContent"></div>
+      </div>
+    </section>
+
+    <!-- Botones inferiores -->
+    <div class="bottom-actions">
+      <button class="btn-back" id="volverBtn">← Volver</button>
+      <button class="btn-reset" id="resetBtn">↺ Restablecer</button>
+      <button class="btn-save" id="saveBtn">💾 Guardar Cambios</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperBrix S.A. | Sistema SuperCalc v2.0</p>
+  </footer>
+
+  <script src="configuracion.js"></script>
+</body>
+</html>
