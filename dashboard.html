@@ -12,13 +12,12 @@
   <header class="header-bar">
     <div class="brand">
       <img src="icons/SB-65-HORIZONTAL.png" alt="logo" class="logo">
-      <h1>SuperCalc</h1>
+      <h1>SuperCalc - SuperBrix</h1>
     </div>
 
     <nav class="user-menu">
       <span class="welcome">Bienvenido, <strong>Jefe de Diseño</strong></span>
       <img src="icons/user2.png" alt="usuario" class="user-icon">
-      <button onclick="cerrarSesion()" class="btn-logout">Cerrar sesión</button>
     </nav>
   </header>
 
@@ -41,7 +40,7 @@
       <p class="subtitle">Seleccione el módulo con el que desea trabajar.</p>
 
       <div class="modules-grid">
-        <!-- 1 -->
+        <!-- 1 - Simulaciones y Cálculos -->
         <article class="module-card" role="button" tabindex="0" onclick="ir('simulaciones.html')">
           <div class="module-thumb">
             <img src="icons/simulaciones-big.png" alt="Simulaciones y cálculos">
@@ -50,7 +49,7 @@
           <p class="muted">Ejecutar cálculos técnicos</p>
         </article>
 
-        <!-- 2 -->
+        <!-- 2 - Base de Datos -->
         <article class="module-card" role="button" tabindex="0" onclick="ir('materiales.html')">
           <div class="module-thumb">
             <img src="icons/baseDatos-big.png" alt="Base de datos">
@@ -59,7 +58,7 @@
           <p class="muted">Materiales y propiedades</p>
         </article>
 
-        <!-- 3 -->
+        <!-- 3 -  Generación de Informes -->
         <article class="module-card" role="button" tabindex="0" onclick="ir('informes.html')">
           <div class="module-thumb">
             <img src="icons/informes-big.png" alt="Generación de informes">
@@ -68,7 +67,7 @@
           <p class="muted">Crear reportes técnicos</p>
         </article>
 
-        <!-- 4 -->
+        <!-- 4 -  Auditoría y Reportes -->
         <article class="module-card" role="button" tabindex="0" onclick="ir('auditoria.html')">
           <div class="module-thumb">
             <img src="icons/auditoria-big.png" alt="Auditoría y reportes">
@@ -77,7 +76,7 @@
           <p class="muted">Historial de operaciones</p>
         </article>
 
-        <!-- 5 - Gestión de Usuarios (ADMIN badge) -->
+        <!-- 5 - Gestión de Usuarios (Etiqueta de Admin) -->
         <article class="module-card" role="button" tabindex="0" data-role="admin" onclick="ir('usuarios.html')">
           <div class="module-thumb">
             <img src="icons/gestion-usuarios-big.png" alt="Gestión de usuarios">
@@ -87,7 +86,7 @@
           <p class="muted">Administrar permisos</p>
         </article>
 
-        <!-- 6 -->
+        <!-- 6 - Configuración del Sistema -->
         <article class="module-card" role="button" tabindex="0" onclick="ir('configuracion.html')">
           <div class="module-thumb">
             <img src="icons/config-big.png" alt="Configuración">
@@ -96,7 +95,7 @@
           <p class="muted">Preferencias del sistema</p>
         </article>
 
-        <!-- 7 -->
+        <!-- 7 - Ayuda y Soporte -->
         <article class="module-card" role="button" tabindex="0" onclick="ir('ayuda.html')">
           <div class="module-thumb">
             <img src="icons/ayuda-big.png" alt="Ayuda y soporte">
@@ -105,7 +104,7 @@
           <p class="muted">Documentación y tutoriales</p>
         </article>
 
-        <!-- 8 -->
+        <!-- 8 - Cerrar Sesión -->
         <article class="module-card module-logout" role="button" tabindex="0" onclick="cerrarSesion()">
           <div class="module-thumb">
             <img src="icons/logout-big.png" alt="Cerrar sesión">
