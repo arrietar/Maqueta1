@@ -314,3 +314,173 @@ footer {
   margin: 20px auto 40px;
   gap: 10px;
 }
+
+/* ===== AUDITORÍA ===== */
+.filter-panel {
+  background: rgba(255,255,255,0.95);
+  border: 3px solid #FF6600;
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin: 20px 60px;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.stats-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 60px;
+  gap: 15px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 25px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.95);
+  width: 22%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.stat-card h4 {
+  font-size: 26px;
+  margin: 0;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.stat-card small {
+  color: #999;
+}
+
+.stat-card.blue { border: 3px solid #2196F3; }
+.stat-card.green { border: 3px solid #4CAF50; }
+.stat-card.orange { border: 3px solid #FF9800; }
+.stat-card.red { border: 3px solid #F44336; }
+
+.stat-card .icon { font-size: 24px; }
+
+.audit-table-section {
+  background: rgba(255,255,255,0.95);
+  border: 3px solid #FF6600;
+  border-radius: 12px;
+  margin: 20px 60px;
+  padding: 20px;
+}
+
+.audit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.audit-table th {
+  background: #FF6600;
+  color: white;
+  text-align: left;
+  padding: 10px;
+}
+
+.audit-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status.success { background: #E8F5E9; color: #2E7D32; }
+.status.error { background: #FFEBEE; color: #C62828; }
+.status.warning { background: #FFF3E0; color: #E65100; }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.pagination button {
+  background: #E0E0E0;
+  border: none;
+  border-radius: 6px;
+  width: 35px;
+  height: 35px;
+  font-weight: bold;
+}
+
+.pagination button.active {
+  background: #FF6600;
+  color: #FFF;
+}
+
+/* ===== MODAL DETALLE ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal.show { display: flex; }
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  position: relative;
+  animation: slideUp 0.3s ease-out;
+}
+
+.modal-content h3 {
+  color: #FF6600;
+  margin-top: 0;
+  text-align: center;
+}
+
+.modal-content p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #666;
+}
+
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+@keyframes slideUp { from {transform: translateY(40px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }

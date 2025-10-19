@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuperCalc - Auditoría y Reportes</title>
+  <link rel="stylesheet" href="calculos.css" />
+</head>
+
+<body>
+  <!-- Barra superior tipo navegador -->
+  <header class="header-bar">
+    <div class="brand">
+      <img src="icons/SB-65-HORIZONTAL.png" alt="logo">
+      <h1>SuperCalc - SuperBrix</h1>
+    </div>
+    <div class="url-bar">
+      <!-- ICONO CANDADO AQUÍ -->
+      <span>https://intrabrix.com/SuperCalc/auditoria</span>
+    </div>
+  </header>
+
+  <!-- Encabezado -->
+  <section class="top-section auditoria-header">
+    <div class="dept-left">
+      <img src="icons/dept-ingenieria.png" alt="Ingeniería">
+      <p>DEPARTAMENTO DE<br><strong>INGENIERÍA Y DISEÑO</strong></p>
+    </div>
+
+    <h2 class="page-title">Auditoría y Reportes</h2>
+
+    <div class="dept-right">
+      <img src="icons/dept-innovacion.png" alt="Innovación">
+      <p>DEPARTAMENTO DE<br><strong>INNOVACIÓN</strong></p>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <span>🏠 Dashboard</span> › <strong>Auditoría y Reportes</strong>
+  </div>
+
+  <!-- Panel de filtros -->
+  <section class="filter-panel">
+    <h3>🔍 Filtros de Búsqueda</h3>
+    <form class="filter-form">
+      <div class="filter-row">
+        <div class="filter-group">
+          <label>Fecha inicio:</label>
+          <input type="date" value="2025-10-01">
+        </div>
+
+        <div class="filter-group">
+          <label>Fecha fin:</label>
+          <input type="date" value="2025-10-10">
+        </div>
+
+        <div class="filter-group">
+          <label>Usuario:</label>
+          <select>
+            <option>Todos los usuarios</option>
+            <option>Juan Pérez</option>
+            <option>María García</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Tipo de acción:</label>
+          <select>
+            <option>Todas las acciones</option>
+            <option>Login</option>
+            <option>Generación de informes</option>
+            <option>Ejecutar cálculo</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Módulo:</label>
+          <select>
+            <option>Todos</option>
+            <option>Informes</option>
+            <option>Configuración</option>
+            <option>Uniones Pernadas</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn primary">🔍 Buscar</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Estadísticas -->
+  <section class="stats-section">
+    <div class="stat-card blue">
+      <div class="icon">📊</div>
+      <div>
+        <h4>1,247</h4>
+        <p>Operaciones totales</p>
+        <small>Últimos 30 días</small>
+      </div>
+    </div>
+
+    <div class="stat-card green">
+      <div class="icon">✓</div>
+      <div>
+        <h4>1,198</h4>
+        <p>Cálculos exitosos</p>
+        <small>96.1% tasa de éxito</small>
+      </div>
+    </div>
+
+    <div class="stat-card orange">
+      <div class="icon">👥</div>
+      <div>
+        <h4>24</h4>
+        <p>Usuarios activos</p>
+        <small>En el período</small>
+      </div>
+    </div>
+
+    <div class="stat-card red">
+      <div class="icon">⚠</div>
+      <div>
+        <h4>49</h4>
+        <p>Errores detectados</p>
+        <small>3.9% del total</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabla de resultados -->
+  <section class="audit-table-section">
+    <table class="audit-table">
+      <thead>
+        <tr>
+          <th>Fecha/Hora ▼</th>
+          <th>Usuario</th>
+          <th>Acción</th>
+          <th>Módulo</th>
+          <th>Estado</th>
+          <th>Detalles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10/10/2025 14:23:15</td>
+          <td>Juan Pérez</td>
+          <td>Cálculo ejecutado</td>
+          <td>Uniones Apernadas</td>
+          <td><span class="status success">EXITOSO</span></td>
+          <td><button class="btn info small">👁️ Ver más</button></td>
+        </tr>
+        <tr>
+          <td>10/10/2025 14:18:42</td>
+          <td>María García</td>
+          <td>Informe generado</td>
+          <td>Informes</td>
+          <td><span class="status success">EXITOSO</span></td>
+          <td><button class="btn info small">👁️ Ver más</button></td>
+        </tr>
+        <tr>
+          <td>10/10/2025 13:45:17</td>
+          <td>Juan Pérez</td>
+          <td>Cálculo ejecutado</td>
+          <td>Soldadura</td>
+          <td><span class="status error">ERROR</span></td>
+          <td><button class="btn info small">👁️ Ver más</button></td>
+        </tr>
+        <tr>
+          <td>10/10/2025 13:05:22</td>
+          <td>Roberto Ruiz</td>
+          <td>Configuración modificada</td>
+          <td>Sistema</td>
+          <td><span class="status warning">ALERTA</span></td>
+          <td><button class="btn info small">👁️ Ver más</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Paginación -->
+    <div class="pagination">
+      <button>←</button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <span>...</span>
+      <button>15</button>
+      <button>→</button>
+    </div>
+  </section>
+
+  <!-- Acciones inferiores -->
+  <div class="bottom-actions">
+    <button class="btn orange">← Volver</button>
+    <button class="btn success">📊 Exportar Excel</button>
+    <button class="btn primary">📄 Reporte PDF</button>
+  </div>
+
+  <!-- MODAL DETALLE -->
+  <div id="modal-detalle" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>📋 Detalle del registro</h3>
+      <p><strong>Fecha y hora:</strong> <span id="detalle-fecha"></span></p>
+      <p><strong>Usuario:</strong> <span id="detalle-usuario"></span></p>
+      <p><strong>Acción:</strong> <span id="detalle-accion"></span></p>
+      <p><strong>Módulo:</strong> <span id="detalle-modulo"></span></p>
+      <p><strong>Estado:</strong> <span id="detalle-estado"></span></p>
+      <button class="btn primary cerrar-modal">Cerrar</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 SuperBrix S.A. | Sistema SuperCalc v2.0</p>
+    <small>Soporte técnico: soporte@superbrix.com</small>
+  </footer>
+
+  <script>
+    document.querySelector('.btn.orange').addEventListener('click', () => {
+      window.location.href = 'dashboard.html';
+    });
+  </script>
+
+  <script>
+    const modal = document.getElementById('modal-detalle');
+    const closeBtn = modal.querySelector('.close');
+    const cerrarModalBtn = modal.querySelector('.cerrar-modal');
+
+    document.querySelectorAll('.ver-detalle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const data = JSON.parse(btn.closest('tr').dataset.detalle);
+        document.getElementById('detalle-fecha').textContent = data.fecha;
+        document.getElementById('detalle-usuario').textContent = data.usuario;
+        document.getElementById('detalle-accion').textContent = data.accion;
+        document.getElementById('detalle-modulo').textContent = data.modulo;
+        document.getElementById('detalle-estado').textContent = data.estado;
+        modal.classList.add('show');
+      });
+    });
+
+    [closeBtn, cerrarModalBtn].forEach(el =>
+      el.addEventListener('click', () => modal.classList.remove('show'))
+    );
+
+    window.addEventListener('click', e => {
+      if (e.target === modal) modal.classList.remove('show');
+    });
+  </script>
+
+</body>
+</html>
