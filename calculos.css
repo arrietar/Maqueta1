@@ -1,0 +1,202 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #33C3E6, #2AB5D9);
+  color: #222;
+  min-height: 100vh;
+}
+
+/* Barra superior */
+.header-bar {
+  background: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand h1 {
+  background: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.brand img {
+  height: 50px;
+}
+
+.url-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 6px 16px;
+  border-radius: 25px;
+  border: 2px solid #ccc;
+}
+
+.url-bar img {
+  height: 15px;        /* 🔧 Ajusta el alto */
+  width: auto;         /* Mantiene la proporción */
+  margin-right: 12px;  /* Espacio entre el logo y el texto */
+  vertical-align: middle; /* Centra el logo con el texto */
+}
+
+/* Encabezado de departamentos */
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 60px 10px;
+}
+
+.dept-left, .dept-right {
+  text-align: center;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.dept-left img, .dept-right img {
+  height: 45px;
+  display: block;
+  margin: 0 auto 5px;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px auto;
+}
+
+.tab {
+  background: #B8A887;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.tab.active {
+  background: #FF6600;
+  color: #FFF;
+}
+
+/* Contenido de pestañas */
+.tab-content {
+  display: none;
+  background: rgba(255,255,255,0.95);
+  border: 3px solid #FF6600;
+  border-radius: 16px;
+  padding: 25px;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+input {
+  border: 2px solid #FF6600;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  border-color: #2196F3;
+  outline: none;
+  box-shadow: 0 0 4px rgba(33,150,243,0.4);
+}
+
+/* Botones */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 30px auto;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.primary { background: #FF6600; color: #fff; }
+.primary:hover { background: #e05a00; }
+
+.secondary { background: #E0E0E0; color: #000; }
+.secondary:hover { background: #ccc; }
+
+.orange { background: #B8A887; color: #000; }
+.orange:hover { background: #a0946f; }
+
+.gray { background: #E0E0E0; color: #000; }
+.gray:hover { background: #ccc; }
+
+/* Ayuda */
+.help-box {
+  width: 60%;
+  margin: 0 auto 40px;
+  background: rgba(255,243,224,0.95);
+  border: 2px solid #FF9800;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 13px;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 13px;
+}

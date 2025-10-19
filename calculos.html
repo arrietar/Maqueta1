@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SuperCalc - Cálculos de Tornillería</title>
+  <link rel="stylesheet" href="calculos.css">
+</head>
+
+<body>
+  <!-- Barra superior -->
+  <header class="header-bar">
+    <div class="brand">
+      <img src="icons/SB-65-HORIZONTAL.png" alt="logo">
+      <h1>SuperCalc - SuperBrix</h1>
+    </div>
+    <div class="url-bar">
+      <img src="icons/candado.png" alt="https">
+      <span>https://intrabrix.com/SuperCalc/boltedJoints</span>
+    </div>
+  </header>
+
+  <!-- Encabezado principal -->
+  <section class="top-section">
+    <div class="dept-left">
+      <!-- ICONO DEPARTAMENTO INGENIERÍA -->
+      <img src="icons/diseno.png" alt="ingeniería">
+      <p>DEPARTAMENTO DE<br><strong>INGENIERÍA Y DISEÑO</strong></p>
+    </div>
+
+    <h2 class="page-title">Bienvenido a SuperCalc</h2>
+
+    <div class="dept-right">
+      <!-- ICONO DEPARTAMENTO INNOVACIÓN -->
+      <img src="icons/innovacion.png" alt="innovación">
+      <p>DEPARTAMENTO DE<br><strong>INNOVACIÓN</strong></p>
+    </div>
+  </section>
+
+  <!-- Contenedor principal -->
+  <main class="main-container">
+
+    <!-- Pestañas -->
+    <div class="tabs">
+      <button class="tab active" data-tab="simple">Unión Simple</button>
+      <button class="tab" data-tab="anclajes">Anclajes a Piso</button>
+      <button class="tab" data-tab="pernadas">Uniones Pernadas</button>
+    </div>
+
+    <!-- Contenido de las pestañas -->
+    <div id="simple" class="tab-content active">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Espesor de Placa 1, t₁ (mm)</label>
+          <input type="number" placeholder="Ingrese valor">
+        </div>
+        <div class="form-group">
+          <label>Longitud Roscada, LT (mm)</label>
+          <input type="number" placeholder="Ingrese valor">
+        </div>
+        <div class="form-group">
+          <label>Espesor de Placa 2, t₂ (mm)</label>
+          <input type="number" placeholder="Ingrese valor">
+        </div>
+        <div class="form-group">
+          <label>Diámetro del Tornillo, d (mm)</label>
+          <input type="number" placeholder="Ingrese valor">
+        </div>
+        <div class="form-group">
+          <label>Espesor de Arandela, t (mm)</label>
+          <input type="number" placeholder="Ingrese valor">
+        </div>
+        <div class="form-group">
+          <label>Carga Axial Total, P (N)</label>
+          <input type="number" placeholder="Ingrese valor">
+        </div>
+        <div class="form-group">
+          <label>Longitud de Tornillo, L (mm)</label>
+          <input type="number" placeholder="Ingrese valor">
+        </div>
+        <div class="form-group">
+          <label>Carga Cortante Total, V (N)</label>
+          <input type="number" placeholder="Ingrese valor">
+        </div>
+      </div>
+    </div>
+
+    <div id="anclajes" class="tab-content">
+      <p>Formulario para cálculos de anclajes a piso. (Se pueden agregar campos y ecuaciones aquí).</p>
+    </div>
+
+    <div id="pernadas" class="tab-content">
+      <p>Formulario para cálculos de uniones pernadas. (Contenido pendiente de implementar).</p>
+    </div>
+
+    <!-- Botones principales -->
+    <div class="action-buttons">
+      <button class="btn primary" id="btnCalcular">Calcular</button>
+      <button class="btn secondary" id="btnLimpiar">Limpiar</button>
+      <button class="btn orange">Generar Informe</button>
+      <button class="btn gray">Ver Informe</button>
+      <button class="btn gray">Exportar Informe</button>
+    </div>
+
+    <!-- Caja de ayuda -->
+    <div class="help-box">
+      <p>💡 <strong>Ayuda:</strong><br>
+      Completa todos los campos para realizar el cálculo.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 SuperBrix S.A. | Sistema SuperCalc v2.0</p>
+    <small>Soporte técnico: soporte@superbrix.com</small>
+  </footer>
+
+  <script>
+    // Interactividad de pestañas
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.tab).classList.add("active");
+      });
+    });
+
+    // Botones principales
+    document.getElementById("btnCalcular").addEventListener("click", () => {
+      alert("Cálculo ejecutado. (Aquí se integrará el motor de cálculo).");
+    });
+
+    document.getElementById("btnLimpiar").addEventListener("click", () => {
+      document.querySelectorAll("input").forEach(i => i.value = "");
+    });
+  </script>
+</body>
+</html>
