@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SuperCalc - Generación de Informes</title>
+  <link rel="stylesheet" href="calculos.css">
+</head>
+
+<body>
+  <!-- Barra superior -->
+  <header class="header-bar">
+    <div class="brand">
+      <img src="icons/SB-65-HORIZONTAL.png" alt="logo">
+      <h1>SuperCalc - SuperBrix</h1>
+    </div>
+    <div class="url-bar">
+      <img src="icons/candado.png" alt="https">
+      <span>https://intrabrix.com/SuperCalc/informes</span>
+    </div>
+  </header>
+
+  <!-- Encabezado -->
+  <section class="top-section informes-header">
+    <div class="dept-left">
+      <img src="icons/diseno.png" alt="Ingeniería">
+      <p>DEPARTAMENTO DE<br><strong>INGENIERÍA Y DISEÑO</strong></p>
+    </div>
+
+    <h2 class="page-title">Generación de Informes</h2>
+
+    <div class="dept-right">
+      <img src="icons/innovacion.png" alt="Innovación">
+      <p>DEPARTAMENTO DE<br><strong>INNOVACIÓN</strong></p>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <span>🏠 Dashboard</span> › <strong>Generación de Informes</strong>
+  </div>
+
+  <!-- Contenedor principal -->
+  <main class="informes-container">
+
+    <!-- Panel izquierdo -->
+    <section class="form-section">
+      <h3>Configuración del Informe</h3>
+
+      <div class="form-group">
+        <label>Título del Informe *</label>
+        <input type="text" placeholder="Ej: Análisis de Uniones Apernadas - Proyecto X">
+      </div>
+
+      <div class="form-group">
+        <label>Tipo de Cálculo *</label>
+        <select>
+          <option>Seleccionar tipo de cálculo</option>
+          <option>Uniones Simple</option>
+          <option>Anclajes a Piso</option>
+          <option>Uniones Pernadas</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group small">
+          <label>Fecha del Informe</label>
+          <input type="date" value="2025-10-18">
+        </div>
+
+        <div class="form-group small">
+          <label>Autor</label>
+          <input type="text" value="Juan Pérez (actual)" readonly>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Proyecto Asociado</label>
+        <input type="text" placeholder="Opcional: Número o nombre del proyecto">
+      </div>
+
+      <h4>Contenido a Incluir</h4>
+      <div class="checkbox-group">
+        <label><input type="checkbox" checked> Parámetros de entrada</label>
+        <label><input type="checkbox" checked> Resultados de cálculos</label>
+        <label><input type="checkbox" checked> Gráficos y diagramas</label>
+        <label><input type="checkbox"> Referencias normativas</label>
+        <label><input type="checkbox"> Conclusiones y recomendaciones</label>
+        <label><input type="checkbox" checked> Tablas de datos</label>
+        <label><input type="checkbox"> Anexos técnicos</label>
+        <label><input type="checkbox" checked> Logo corporativo</label>
+      </div>
+    </section>
+
+    <!-- Panel derecho -->
+    <section class="preview-section">
+      <h3>Vista Previa</h3>
+
+      <div class="preview-box">
+        <div class="preview-header">
+          <div class="preview-logo">LOGO SUPERBRIX</div>
+          <h4>Informe Técnico</h4>
+          <hr>
+        </div>
+
+        <div class="preview-body">
+          <p><strong>Título:</strong> [Título del informe]</p>
+          <p><strong>Fecha:</strong> 10/10/2025</p>
+          <p><strong>Autor:</strong> Juan Pérez</p>
+
+          <h5>1. Parámetros de Entrada</h5>
+          <div class="preview-block gray"></div>
+          <div class="preview-block gray"></div>
+
+          <h5>2. Resultados</h5>
+          <div class="preview-block green"></div>
+
+          <h5>3. Gráficos</h5>
+          <div class="preview-block blue"></div>
+        </div>
+      </div>
+
+      <div class="export-options">
+        <h4>Formato de Exportación</h4>
+        <div class="export-buttons">
+          <button class="btn primary">📄 PDF</button>
+          <button class="btn success">📊 Excel</button>
+          <button class="btn info">📝 Word</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Botones inferiores -->
+  <div class="bottom-actions">
+    <button class="btn orange">← Volver</button>
+    <button class="btn gray">🗑️ Limpiar</button>
+    <button class="btn info">👁️ Vista Previa</button>
+    <button class="btn primary">✓ Generar Informe</button>
+  </div>
+
+  <footer>
+    <p>© 2025 SuperBrix S.A. | Sistema SuperCalc v2.0</p>
+    <small>Soporte técnico: soporte@superbrix.com</small>
+  </footer>
+
+  <script>
+    document.querySelector('.btn.gray').addEventListener('click', () => {
+      document.querySelectorAll('input[type=text], input[type=date]').forEach(i => i.value = '');
+      document.querySelector('select').selectedIndex = 0;
+      document.querySelectorAll('input[type=checkbox]').forEach(c => c.checked = false);
+    });
+  </script>
+</body>
+</html>
